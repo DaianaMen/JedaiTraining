@@ -1,9 +1,8 @@
 package views;
 
-import controllers.ClienteController;
-import models.Cliente;
-
 public class CadastrarCliente {
 	
-	
+	public static void renderizar() {
+
+	}
 }
