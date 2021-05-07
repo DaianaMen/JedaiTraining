@@ -1,4 +1,4 @@
-package views;
+package views.treino;
 
 public class CriarTreino {
 

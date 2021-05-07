@@ -6,6 +6,7 @@ import views.cliente.ProcurarCliente;
 import models.Exercicio;
 import controllers.ExercicioController;
 import views.exercicio.ListarExercicio;
+import views.exercicio.ProcurarExercicio;
 
 import java.util.Scanner;
 
@@ -32,6 +33,7 @@ public class Principal {
 
 			System.out.println("51 - Cadastrar Exercicio");
 			System.out.println("52 - Listar Exercicios");
+			System.out.println("53 - Procurar Exercicio");
 
 
 			System.out.println("0 - Sair");
@@ -51,6 +53,9 @@ public class Principal {
 					break;
 				case 52:
 					ListarExercicio.renderizar();
+					break;
+				case 53:
+					ProcurarExercicio.renderizar();
 					break;
 				default:
 
