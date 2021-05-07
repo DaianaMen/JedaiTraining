@@ -8,8 +8,8 @@ public class Cliente {
 	}
 
 	private String nome;
-	private String matricula;
-	private double idade;
+	private int matricula;
+	private int idade;
 	private String email;
 	private String sexo;
 	private Date criadoEm;
@@ -22,11 +22,11 @@ public class Cliente {
 		return this.nome;
 	}
 
-	public String getMatricula() {
+	public int getMatricula() {
 		return matricula;
 	}
 
-	public void setMatricula(String matricula) {
+	public void setMatricula(int matricula) {
 		this.matricula = matricula;
 	}
 
@@ -34,7 +34,7 @@ public class Cliente {
 		return idade;
 	}
 
-	public void setIdade(double idade) {
+	public void setIdade(int idade) {
 		this.idade = idade;
 	}
 

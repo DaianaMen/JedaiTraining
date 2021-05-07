@@ -1,5 +1,9 @@
 package views;
 
+import views.cliente.CadastrarCliente;
+import views.cliente.ListarCliente;
+import views.cliente.ProcurarCliente;
+
 import java.util.Scanner;
 
 public class Principal {
@@ -8,18 +12,32 @@ public class Principal {
 		Scanner sc = new Scanner(System.in);
 		int opcao;
 		do {
-			System.out.println("\n-- Academia Jedai --\n");
-			System.out.println("1 - Cadastrar Aluno");
-			System.out.println("2 - Cadastrar Intrutor");
-			System.out.println("3 - Montar Treino");
-			System.out.println("4 - Listar Treino");
-			System.out.println("5 - Agendar Treino");
+			System.out.println("\n== Academia Jedai ==\n");
+			System.out.println("11 - Cadastrar Cliente");
+			System.out.println("12 - Listar Cliente");
+			System.out.println("13 - Procurar Cliente");
+
+			System.out.println("21 - Cadastrar Intrutor");
+			System.out.println("22 - Listar Intrutor");
+
+			System.out.println("31 - Agendar Treino");
+			System.out.println("32 - Montar Treino");
+			System.out.println("33 - Listar Treino");
+
 			System.out.println("0 - Sair");
-			System.out.println("\nDigite uma das opções:");
+			System.out.print("\nDigite uma das opções: ");
+
 			opcao = sc.nextInt();
+
 			switch (opcao) {
-				case 1:
+				case 11:
 					CadastrarCliente.renderizar();
+					break;
+				case 12:
+					ListarCliente.renderizar();
+					break;
+				case 13:
+					ProcurarCliente.renderizar();
 					break;
 				case 2:
 
@@ -40,6 +58,7 @@ public class Principal {
 					break;
 			}
 		} while (opcao != 0);
+
 		sc.close();
 	}
 }
