@@ -1,26 +1,34 @@
 package models;
 
-import java.util.Date;
+import java.util.ArrayList;
 
 public class Treino {
 
-	private String treino;
-	private Date dia;
+	private ArrayList<Exercicio> exercicios;
+	private String treinoDesc;
+	private String diaDaSemana;
 
-	public String getTreino() {
-		return treino;
+	public String getTreinoDesc() {
+		return treinoDesc;
 	}
 
-	public void setTreino(String treino) {
-		this.treino = treino;
+	public void setTreinoDesc(String treinoDesc) {
+		this.treinoDesc = treinoDesc;
 	}
 
-	public Date getDia() {
-		return dia;
+	public String getDiaDaSemana() {
+		return diaDaSemana;
 	}
 
-	public void setDia(Date dia) {
-		this.dia = dia;
+	public void setDiaDaSemana(String diaDaSemana) {
+		this.diaDaSemana = diaDaSemana;
 	}
 
+	public ArrayList<Exercicio> getExercicios() {
+		return exercicios;
+	}
+
+	public void setExercicios(ArrayList<Exercicio> exercicios) {
+		this.exercicios = exercicios;
+	}
 }

@@ -2,32 +2,23 @@ package models;
 
 public class Exercicio {
 
-	private Treino treino;
-	private String atividadeExercicio;
+	private String atividade;
 	private double series;
 	private double repeticoes;
 
-	public Treino getTreino() {
-		return treino;
+	public String getAtividade() {
+		return atividade;
 	}
 
-	public void setTreino(Treino treino) {
-		this.treino = treino;
-	}
-
-	public String getAtividadeExercicio() {
-		return atividadeExercicio;
-	}
-
-	public void setAtividadeExercicio(String atividadeExercicio) {
-		this.atividadeExercicio = atividadeExercicio;
+	public void setAtividade(String atividade) {
+		this.atividade = atividade;
 	}
 
 	public double getSeries() {
 		return series;
 	}
 
-	public void setTreino(double series) {
+	public void setSeries(double series) {
 		this.series = series;
 	}
 
