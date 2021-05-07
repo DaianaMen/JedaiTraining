@@ -7,6 +7,8 @@ import models.Exercicio;
 import controllers.ExercicioController;
 import views.exercicio.ListarExercicio;
 import views.exercicio.ProcurarExercicio;
+import views.treino.ListarTreino;
+import views.treino.MontarTreino;
 
 import java.util.Scanner;
 
@@ -28,10 +30,10 @@ public class Principal {
 			System.out.println("31 - Montar Treino");
 			System.out.println("32 - Listar Treinos");
 
-			System.out.println("41 - Fazer Agendamento");
-			System.out.println("42 - Listar Agendamentos");
+//			System.out.println("41 - Fazer Agendamento");
+//			System.out.println("42 - Listar Agendamentos");
 
-			System.out.println("51 - Cadastrar Exercicio");
+//			System.out.println("51 - Cadastrar Exercicio");
 			System.out.println("52 - Listar Exercicios");
 			System.out.println("53 - Procurar Exercicio");
 
@@ -50,6 +52,12 @@ public class Principal {
 					break;
 				case 13:
 					ProcurarCliente.renderizar();
+					break;
+				case 31:
+					MontarTreino.renderizar();
+					break;
+				case 32:
+					ListarTreino.renderizar();
 					break;
 				case 52:
 					ListarExercicio.renderizar();

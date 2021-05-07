@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Treino {
 
-	private ArrayList<Exercicio> exercicios;
+	private ArrayList<Exercicio> exercicios = new ArrayList<Exercicio>();
 	private String treinoDesc;
 	private String diaDaSemana;
 
@@ -30,5 +30,9 @@ public class Treino {
 
 	public void setExercicios(ArrayList<Exercicio> exercicios) {
 		this.exercicios = exercicios;
+	}
+
+	public void adicionarExercicio(Exercicio exercicio) {
+		exercicios.add(exercicio);
 	}
 }

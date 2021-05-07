@@ -3,8 +3,8 @@ package models;
 public class Exercicio {
 
 	private String atividade;
-	private double series;
-	private double repeticoes;
+	private int series;
+	private int repeticoes;
 
 	public String getAtividade() {
 		return atividade;
@@ -14,19 +14,19 @@ public class Exercicio {
 		this.atividade = atividade;
 	}
 
-	public double getSeries() {
+	public int getSeries() {
 		return series;
 	}
 
-	public void setSeries(double series) {
+	public void setSeries(int series) {
 		this.series = series;
 	}
 
-	public double getRepeticoes() {
+	public int getRepeticoes() {
 		return repeticoes;
 	}
 
-	public void setRepeticoes(double repeticoes) {
+	public void setRepeticoes(int repeticoes) {
 		this.repeticoes = repeticoes;
 	}
 
