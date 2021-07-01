@@ -9,13 +9,11 @@ import java.util.logging.Level;
 public class Agendamento {
 
 	private Cliente cliente;
-	private Instrutor instrutor;
-	private Treino treino;
 	private Date data;
 
-	public Agendamento(Cliente cliente, Instrutor instrutor, String data) {
+
+	public Agendamento(Cliente cliente, String data) {
 		this.cliente = cliente;
-		this.instrutor = instrutor;
 		try {
 			this.data = new SimpleDateFormat("dd/MM/yyyy HH:mm").parse(data);
 		} catch (ParseException ex) {
@@ -31,28 +29,37 @@ public class Agendamento {
 		this.cliente = cliente;
 	}
 
-	public Instrutor getInstrutor() {
-		return instrutor;
-	}
-
-	public void setInstrutor(Instrutor instrutor) {
-		this.instrutor = instrutor;
-	}
-
-	public Treino getTreino() {
-		return treino;
-	}
-
-	public void setTreino(Treino treino) {
-		this.treino = treino;
-	}
-
 	public String getDataFormatada() {
 		return new SimpleDateFormat("dd/MM/yyyy").format(data);
 	}
 
 	public String getHoraFormatada() {
 		return new SimpleDateFormat("HH:mm").format(data);
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((data == null) ? 0 : data.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Agendamento other = (Agendamento) obj;
+		if (data == null) {
+			if (other.data != null)
+				return false;
+		} else if (!data.equals(other.data))
+			return false;
+		return true;
 	}
 }
 

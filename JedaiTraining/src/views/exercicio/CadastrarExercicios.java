@@ -1,4 +1,4 @@
-package views;
+package views.exercicio;
 
 public class CadastrarExercicios {
 

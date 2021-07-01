@@ -2,6 +2,7 @@ package views.cliente;
 
 import controllers.ClienteController;
 import models.Cliente;
+import utils.Console;
 
 import java.util.Scanner;
 
@@ -14,7 +15,7 @@ public class ProcurarCliente {
 	public static void renderizar() {
 		System.out.println("\n== Procurar Cliente ==");
 		System.out.print("Matricula: ");
-		matricula = sc.nextInt();
+		matricula = Console.lerInteiro("");
 
 		cliente = ClienteController.procurarPorMatricula(matricula);
 		ImprimirCliente.imprimirCliente(cliente);

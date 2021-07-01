@@ -1,39 +1,38 @@
-package views.cliente;
-
+package views.instrutor;
 
 import java.util.Scanner;
 
-import controllers.ClienteController;
-import models.Cliente;
+import controllers.InstrutorController;
+import models.Instrutor;
 import utils.Console;
 
-public class CadastrarCliente {
+public class CadastrarInstrutor {
 
 	private static Scanner sc = new Scanner(System.in);
-	private static Cliente cliente;
+	private static Instrutor instrutor;
 
 	public static void renderizar() {
-		cliente = new Cliente();
+		instrutor = new Instrutor();
 
 		System.out.println("\n== Cadastrar Cliente ==");
 
 		System.out.print("Nome: ");
-		cliente.setNome(sc.next());
+		instrutor.setNome(sc.next());
 
 		//System.out.print("Idade: ");
-		cliente.setIdade(Console.lerInteiro("\nIdade: "));
+		instrutor.setIdade(Console.lerInteiro("\nIdade: "));
 
 		System.out.print("E-mail: ");
-		cliente.setEmail(sc.next());
+		instrutor.setEmail(sc.next());
 
 		String sexo;
 		do {
 			System.out.print("Sexo [m|f]: ");
 			sexo = sc.next().toLowerCase();
 		} while (!sexo.equals("m") && !sexo.equals("f"));
-		cliente.setSexo(sexo);
+		instrutor.setSexo(sexo);
 
-		ClienteController.cadastrar(cliente);
+		InstrutorController.cadastrar(instrutor);
 		System.out.println("Cliente cadastrado com sucesso!!!");
 	}
 }

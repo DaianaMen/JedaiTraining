@@ -1,12 +1,17 @@
 package views;
 
+import views.agendamento.AgendarTreino;
+import views.agendamento.ListarAgendamento;
 import views.cliente.CadastrarCliente;
 import views.cliente.ListarCliente;
 import views.cliente.ProcurarCliente;
 import models.Exercicio;
+import utils.Console;
 import controllers.ExercicioController;
 import views.exercicio.ListarExercicio;
 import views.exercicio.ProcurarExercicio;
+import views.instrutor.CadastrarInstrutor;
+import views.instrutor.ListarInstrutor;
 import views.treino.ListarTreino;
 import views.treino.MontarTreino;
 
@@ -24,14 +29,14 @@ public class Principal {
 			System.out.println("12 - Listar Cliente");
 			System.out.println("13 - Procurar Cliente");
 
-//			System.out.println("21 - Cadastrar Intrutor");
-//			System.out.println("22 - Listar Intrutor");
+			System.out.println("21 - Cadastrar Intrutor");
+			System.out.println("22 - Listar Intrutor");
 
 			System.out.println("31 - Montar Treino");
 			System.out.println("32 - Listar Treinos");
 
-//			System.out.println("41 - Fazer Agendamento");
-//			System.out.println("42 - Listar Agendamentos");
+			System.out.println("41 - Fazer Agendamento");
+			System.out.println("42 - Listar Agendamentos");
 
 //			System.out.println("51 - Cadastrar Exercicio");
 			System.out.println("52 - Listar Exercicios");
@@ -39,9 +44,9 @@ public class Principal {
 
 
 			System.out.println("0 - Sair");
-			System.out.print("\nDigite uma das opções: ");
+			
 
-			opcao = sc.nextInt();
+			opcao = Console.lerInteiro("\nDigite a op��o desejada:");
 
 			switch (opcao) {
 				case 11:
@@ -53,12 +58,24 @@ public class Principal {
 				case 13:
 					ProcurarCliente.renderizar();
 					break;
+				case 21:
+					CadastrarInstrutor.renderizar();
+					break;
+				case 22:
+					ListarInstrutor.renderizar();
+					break;
 				case 31:
 					MontarTreino.renderizar();
 					break;
 				case 32:
 					ListarTreino.renderizar();
 					break;
+				case 41:
+					AgendarTreino.renderizar();
+					break;
+				case 42:
+					ListarAgendamento.renderizar();
+					break;		
 				case 52:
 					ListarExercicio.renderizar();
 					break;
@@ -95,8 +112,8 @@ public class Principal {
 			exercicio.setSeries(5);
 			ExercicioController.cadastrar(exercicio);
 		} catch (Exception e) {
-			// Neste ponto não há nada a fazer já que não
-			// ocorrerá nenhum erro de exercicio duplicado
+			// Neste ponto nÃ£o hÃ¡ nada a fazer jÃ¡ que nÃ£o
+			// ocorrerÃ¡ nenhum erro de exercicio duplicado
 		}
 	}
 }
